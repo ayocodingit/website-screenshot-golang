@@ -11,9 +11,9 @@ import (
 
 func GetScreenshot(screenShotUrl string, quality int) (filename string, err error) {
 	var buf []byte
-
 	var options []chromedp.ExecAllocatorOption
-	options = append(options, chromedp.WindowSize(1280, 1280))
+
+	options = append(options, chromedp.WindowSize(1400, 900))
 	options = append(options, chromedp.DefaultExecAllocatorOptions[:]...)
 
 	actx, acancel := chromedp.NewExecAllocator(context.Background(), options...)
