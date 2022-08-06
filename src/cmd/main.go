@@ -29,7 +29,7 @@ func handler(c *gin.Context) {
 		return
 	}
 
-	filename, err := utils.GetScreenshot(screenshot.URL, screenshot.Quality)
+	filename, err := utils.GetScreenshot(screenshot.URL)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"msg": err.Error()})
 		return

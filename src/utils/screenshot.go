@@ -9,7 +9,7 @@ import (
 	"github.com/chromedp/chromedp"
 )
 
-func GetScreenshot(screenShotUrl string, quality int) (filename string, err error) {
+func GetScreenshot(screenShotUrl string) (filename string, err error) {
 	var buf []byte
 	var options []chromedp.ExecAllocatorOption
 
